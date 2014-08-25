@@ -20,10 +20,11 @@ NSString * const kHHAMessageCenterPriorityErrorBackgroundColorKey  = @"kHHAMessa
 NSString * const kHHAMessageCenterPriorityNormalBackgroundColorKey = @"kHHAMessageCenterPriorityNormalBackgroundColorKey";
 NSString * const kHHAMessageCenterPriorityLowBackgroundColorKey    = @"kHHAMessageCenterPriorityLowBackgroundColorKey";
 
-NSString * const kHHAMessageCenterPriorityErrorRemoved    = @"kHHAMessageCenterPriorityErrorRemoved";
-NSString * const kHHAMessageCenterPriorityHighRemoved    = @"kHHAMessageCenterPriorityHighRemoved";
-NSString * const kHHAMessageCenterPriorityNormalRemoved    = @"kHHAMessageCenterPriorityNormalRemoved";
+NSString * const kHHAMessageCenterPriorityErrorRemoved  = @"kHHAMessageCenterPriorityErrorRemoved";
+NSString * const kHHAMessageCenterPriorityHighRemoved   = @"kHHAMessageCenterPriorityHighRemoved";
+NSString * const kHHAMessageCenterPriorityNormalRemoved = @"kHHAMessageCenterPriorityNormalRemoved";
 NSString * const kHHAMessageCenterPriorityLowRemoved    = @"kHHAMessageCenterPriorityLowRemoved";
+NSString * const kHHAMessageCenterMessageRemoved        = @"kHHAMessageCenterMessageRemoved";
 
 @interface HHAMessageCenter()
 @property (strong, nonatomic) UIView *messageCenter;
@@ -305,6 +306,7 @@ void resetOnceTokenMessageCenter(void) {
     [_messages removeObjectAtIndex:index];
     if (priority >= 0) {
         [[self getPriorityArrayForLabelsOfPriority:priority] removeObject:label];
+        [self postNotificationOfRemovedMessageOfPriority:priority];
     }
     NSTimeInterval duration = (animated) ? _animationTime : 0.0;
     [UIView animateWithDuration:duration animations:^{
@@ -419,6 +421,7 @@ void resetOnceTokenMessageCenter(void) {
             [NSNotificationCenter hha_postNotificationOnMainTheadWithName:kHHAMessageCenterPriorityLowRemoved object:nil];
             break;
     }
+    [NSNotificationCenter hha_postNotificationOnMainTheadWithName:kHHAMessageCenterMessageRemoved object:nil];
 }
 
 #pragma mark - Properties
@@ -441,6 +444,21 @@ void resetOnceTokenMessageCenter(void) {
         HHAMessageCenterMessage *message = [HHAMessageCenterMessage messageWithText:label.text priority:HHAMessageCenterMessagePriorityError textAlignment:label.textAlignment];
         [allMessages addObject:message];
     }
+    
+    return allMessages;
+}
+
+- (NSArray *)allMessagesInQueue {
+    NSMutableArray *allMessages = [NSMutableArray array];
+    
+    [allMessages addObjectsFromArray:_errorPriority];
+    [allMessages addObjectsFromArray:_errorPriorityPending];
+    [allMessages addObjectsFromArray:_highPriority];
+    [allMessages addObjectsFromArray:_highPriorityPending];
+    [allMessages addObjectsFromArray:_normalPriority];
+    [allMessages addObjectsFromArray:_normalPriorityPending];
+    [allMessages addObjectsFromArray:_lowPriority];
+    [allMessages addObjectsFromArray:_lowPriorityPending];
     
     return allMessages;
 }

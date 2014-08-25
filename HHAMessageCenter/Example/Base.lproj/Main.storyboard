@@ -69,9 +69,17 @@
                                     <constraint firstAttribute="height" constant="50" id="xOn-wy-ARe"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sPK-w2-dnD">
+                                <rect key="frame" x="279" y="457" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="centerX" secondItem="sPK-w2-dnD" secondAttribute="centerX" id="1YG-N5-GyG"/>
+                            <constraint firstItem="sPK-w2-dnD" firstAttribute="top" secondItem="e6p-KD-2Yn" secondAttribute="bottom" constant="8" id="386-Re-lOU"/>
                             <constraint firstAttribute="centerX" secondItem="JX5-zM-aGJ" secondAttribute="centerX" id="9AD-PH-0yd"/>
                             <constraint firstAttribute="centerX" secondItem="pXv-7C-8mE" secondAttribute="centerX" id="Cr5-56-0XJ"/>
                             <constraint firstItem="2le-Lv-Ttg" firstAttribute="top" secondItem="JX5-zM-aGJ" secondAttribute="bottom" constant="8" id="Y8X-Cv-ADH"/>
@@ -85,6 +93,7 @@
                     <connections>
                         <outlet property="addMessageButton" destination="pXv-7C-8mE" id="we5-7A-qFP"/>
                         <outlet property="changeMaxMessagesStepper" destination="1Lq-KY-S89" id="3gY-gs-7cP"/>
+                        <outlet property="currentNumberOfMessagesLabel" destination="sPK-w2-dnD" id="cSu-BJ-t4G"/>
                         <outlet property="maxMessagesLabel" destination="j5n-Sh-IGD" id="OQN-VT-4NC"/>
                         <outlet property="removeAllMessagesButton" destination="2le-Lv-Ttg" id="opS-hJ-R2V"/>
                         <outlet property="removeMessageButton" destination="JX5-zM-aGJ" id="PcQ-e6-R7U"/>

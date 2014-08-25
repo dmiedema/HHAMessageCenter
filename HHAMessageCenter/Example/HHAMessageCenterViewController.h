@@ -18,6 +18,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *removeAllMessagesButton;
 @property (weak, nonatomic) IBOutlet UILabel *maxMessagesLabel;
 @property (weak, nonatomic) IBOutlet UIStepper *changeMaxMessagesStepper;
+@property (weak, nonatomic) IBOutlet UILabel *currentNumberOfMessagesLabel;
 
 - (IBAction)addMessage:(UIButton *)sender;
 - (IBAction)removeTopMessage:(UIButton *)sender;

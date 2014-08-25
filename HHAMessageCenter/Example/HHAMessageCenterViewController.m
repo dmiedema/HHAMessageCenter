@@ -13,15 +13,26 @@
 @end
 
 @implementation HHAMessageCenterViewController
-
+#pragma mark - View Life Cylce
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    CGRect frame = CGRectMake(0, 64, self.view.frame.size.width, self.view.frame.size.height);
+    CGRect frame = CGRectMake(0, 20, self.view.frame.size.width, self.view.frame.size.height);
     _messageCenter = [[HHAMessageCenter alloc] initWithMaxFrame:frame messageCenterOrientation:HHAMessageCenterOrientationTop containerView:self.view optionsDictionary:nil];
+    [self updateCountLabel];
 }
 
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateCountLabel) name:kHHAMessageCenterMessageRemoved object:nil];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    [super viewWillDisappear:animated];
+}
+#pragma mark - IBActions
 - (IBAction)addMessage:(UIButton *)sender {
     NSInteger priority = arc4random_uniform(4);
     NSString *message;
@@ -41,6 +52,7 @@
     }
     
     [_messageCenter addMessageString:message priority:priority animated:YES];
+    [self updateCountLabel];
 }
 
 - (IBAction)removeTopMessage:(UIButton *)sender {
@@ -55,5 +67,9 @@
 - (IBAction)changeMaxMessages:(UIStepper *)sender {
     [_messageCenter setMaxMessages:sender.value];
     _maxMessagesLabel.text = [NSString stringWithFormat:@"%f", sender.value];
+}
+
+- (void)updateCountLabel {
+    _currentNumberOfMessagesLabel.text = [NSString stringWithFormat:@"%li", (long)[_messageCenter.allMessagesInQueue count]];
 }
 @end

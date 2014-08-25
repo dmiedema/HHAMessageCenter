@@ -69,6 +69,8 @@ extern NSString * const kHHAMessageCenterPriorityHighRemoved;
 extern NSString * const kHHAMessageCenterPriorityNormalRemoved;
 /// NSNotification Name for when a message with priority low is removed by either being pushed out or timing out
 extern NSString * const kHHAMessageCenterPriorityLowRemoved;
+/// NSNotification Name when a message is removed by either being pushed out or timing out
+extern NSString * const kHHAMessageCenterMessageRemoved;
 
 /**
  *  Message Center for displaying a set number of alerts/information
@@ -115,7 +117,7 @@ extern NSString * const kHHAMessageCenterPriorityLowRemoved;
  */
 @property (strong, nonatomic) UIView *containerView;
 /** 
- *  Array of HHAMessageCenterMessage objects that are currently being displayed.
+ *  Array of @c HHAMessageCenterMessage objects that are currently being displayed.
  *  This property is read only because it should not be manipulated nor
  *  should any side effects be able to be triggered mearly by accessing
  *  this property. 
@@ -123,6 +125,11 @@ extern NSString * const kHHAMessageCenterPriorityLowRemoved;
  *  To add/remove messages see the various add & remove methods.
  */
 @property (readonly, nonatomic) NSArray *currentMessages;
+/**
+ *  Array of @c HHAMessageCenterMessage objects that are in queue to display.
+ *  This property is readonly because it should never be manipulated directly
+ */
+@property (readonly, nonatomic) NSArray *allMessagesInQueue;
 
 #pragma mark - Shared Instance
 /**
