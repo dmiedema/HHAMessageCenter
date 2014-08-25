@@ -17,9 +17,9 @@
 		5464D27319ABA5E10044BDE7 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5464D27119ABA5E10044BDE7 /* Info.plist */; };
 		5464D27419ABA5E10044BDE7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5464D27219ABA5E10044BDE7 /* main.m */; };
 		5464D27619ABA6230044BDE7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5464D27519ABA6230044BDE7 /* CoreGraphics.framework */; };
-		5464D27919ABA7850044BDE7 /* NSObject+HHAHelperMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = 5464D27819ABA7850044BDE7 /* NSObject+HHAHelperMethods.m */; };
-		5464D27C19ABA7C60044BDE7 /* NSArray+HHAHelperMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = 5464D27B19ABA7C60044BDE7 /* NSArray+HHAHelperMethods.m */; };
-		5464D27F19ABA9400044BDE7 /* NSNotificationCenter+HHAHelperMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = 5464D27E19ABA9400044BDE7 /* NSNotificationCenter+HHAHelperMethods.m */; };
+		5464D28719ABAFEF0044BDE7 /* NSArray+HHAHelperMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = 5464D28219ABAFEE0044BDE7 /* NSArray+HHAHelperMethods.m */; };
+		5464D28819ABAFEF0044BDE7 /* NSNotificationCenter+HHAHelperMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = 5464D28419ABAFEE0044BDE7 /* NSNotificationCenter+HHAHelperMethods.m */; };
+		5464D28919ABAFEF0044BDE7 /* NSObject+HHAHelperMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = 5464D28619ABAFEE0044BDE7 /* NSObject+HHAHelperMethods.m */; };
 		54AFD3FD19ABA50C000F6FFE /* HHAMessageCenterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 54AFD3FC19ABA50C000F6FFE /* HHAMessageCenterTests.m */; };
 /* End PBXBuildFile section */
 
@@ -49,12 +49,12 @@
 		5464D27119ABA5E10044BDE7 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Example/Info.plist; sourceTree = "<group>"; };
 		5464D27219ABA5E10044BDE7 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Example/main.m; sourceTree = "<group>"; };
 		5464D27519ABA6230044BDE7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		5464D27719ABA7850044BDE7 /* NSObject+HHAHelperMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+HHAHelperMethods.h"; path = "Source/NSObject+HHAHelperMethods.h"; sourceTree = "<group>"; };
-		5464D27819ABA7850044BDE7 /* NSObject+HHAHelperMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+HHAHelperMethods.m"; path = "Source/NSObject+HHAHelperMethods.m"; sourceTree = "<group>"; };
-		5464D27A19ABA7C60044BDE7 /* NSArray+HHAHelperMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSArray+HHAHelperMethods.h"; path = "Source/NSArray+HHAHelperMethods.h"; sourceTree = "<group>"; };
-		5464D27B19ABA7C60044BDE7 /* NSArray+HHAHelperMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSArray+HHAHelperMethods.m"; path = "Source/NSArray+HHAHelperMethods.m"; sourceTree = "<group>"; };
-		5464D27D19ABA9400044BDE7 /* NSNotificationCenter+HHAHelperMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSNotificationCenter+HHAHelperMethods.h"; path = "Source/NSNotificationCenter+HHAHelperMethods.h"; sourceTree = "<group>"; };
-		5464D27E19ABA9400044BDE7 /* NSNotificationCenter+HHAHelperMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSNotificationCenter+HHAHelperMethods.m"; path = "Source/NSNotificationCenter+HHAHelperMethods.m"; sourceTree = "<group>"; };
+		5464D28119ABAFEE0044BDE7 /* NSArray+HHAHelperMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSArray+HHAHelperMethods.h"; path = "Source/Categories/NSArray+HHAHelperMethods.h"; sourceTree = "<group>"; };
+		5464D28219ABAFEE0044BDE7 /* NSArray+HHAHelperMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSArray+HHAHelperMethods.m"; path = "Source/Categories/NSArray+HHAHelperMethods.m"; sourceTree = "<group>"; };
+		5464D28319ABAFEE0044BDE7 /* NSNotificationCenter+HHAHelperMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSNotificationCenter+HHAHelperMethods.h"; path = "Source/Categories/NSNotificationCenter+HHAHelperMethods.h"; sourceTree = "<group>"; };
+		5464D28419ABAFEE0044BDE7 /* NSNotificationCenter+HHAHelperMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSNotificationCenter+HHAHelperMethods.m"; path = "Source/Categories/NSNotificationCenter+HHAHelperMethods.m"; sourceTree = "<group>"; };
+		5464D28519ABAFEE0044BDE7 /* NSObject+HHAHelperMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+HHAHelperMethods.h"; path = "Source/Categories/NSObject+HHAHelperMethods.h"; sourceTree = "<group>"; };
+		5464D28619ABAFEE0044BDE7 /* NSObject+HHAHelperMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+HHAHelperMethods.m"; path = "Source/Categories/NSObject+HHAHelperMethods.m"; sourceTree = "<group>"; };
 		54AFD3E019ABA50C000F6FFE /* HHAMessageCenter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HHAMessageCenter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54AFD3F619ABA50C000F6FFE /* HHAMessageCenterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HHAMessageCenterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		54AFD3FB19ABA50C000F6FFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -87,6 +87,19 @@
 			);
 			name = Base.lproj;
 			path = Example/Base.lproj;
+			sourceTree = "<group>";
+		};
+		5464D28019ABAFCD0044BDE7 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				5464D28119ABAFEE0044BDE7 /* NSArray+HHAHelperMethods.h */,
+				5464D28219ABAFEE0044BDE7 /* NSArray+HHAHelperMethods.m */,
+				5464D28319ABAFEE0044BDE7 /* NSNotificationCenter+HHAHelperMethods.h */,
+				5464D28419ABAFEE0044BDE7 /* NSNotificationCenter+HHAHelperMethods.m */,
+				5464D28519ABAFEE0044BDE7 /* NSObject+HHAHelperMethods.h */,
+				5464D28619ABAFEE0044BDE7 /* NSObject+HHAHelperMethods.m */,
+			);
+			name = Categories;
 			sourceTree = "<group>";
 		};
 		54AFD3D719ABA50C000F6FFE = {
@@ -166,12 +179,7 @@
 				5464D25919ABA5C40044BDE7 /* HHAMessageCenter.m */,
 				5464D25A19ABA5C40044BDE7 /* HHAMessageCenterMessage.h */,
 				5464D25B19ABA5C40044BDE7 /* HHAMessageCenterMessage.m */,
-				5464D27719ABA7850044BDE7 /* NSObject+HHAHelperMethods.h */,
-				5464D27819ABA7850044BDE7 /* NSObject+HHAHelperMethods.m */,
-				5464D27A19ABA7C60044BDE7 /* NSArray+HHAHelperMethods.h */,
-				5464D27B19ABA7C60044BDE7 /* NSArray+HHAHelperMethods.m */,
-				5464D27D19ABA9400044BDE7 /* NSNotificationCenter+HHAHelperMethods.h */,
-				5464D27E19ABA9400044BDE7 /* NSNotificationCenter+HHAHelperMethods.m */,
+				5464D28019ABAFCD0044BDE7 /* Categories */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -277,13 +285,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				5464D25D19ABA5C40044BDE7 /* HHAMessageCenterMessage.m in Sources */,
-				5464D27C19ABA7C60044BDE7 /* NSArray+HHAHelperMethods.m in Sources */,
 				5464D26C19ABA5CF0044BDE7 /* HHAMessageCenterViewController.m in Sources */,
-				5464D27F19ABA9400044BDE7 /* NSNotificationCenter+HHAHelperMethods.m in Sources */,
-				5464D27919ABA7850044BDE7 /* NSObject+HHAHelperMethods.m in Sources */,
 				5464D27019ABA5CF0044BDE7 /* ViewController.m in Sources */,
+				5464D28819ABAFEF0044BDE7 /* NSNotificationCenter+HHAHelperMethods.m in Sources */,
 				5464D25C19ABA5C40044BDE7 /* HHAMessageCenter.m in Sources */,
+				5464D28719ABAFEF0044BDE7 /* NSArray+HHAHelperMethods.m in Sources */,
 				5464D27419ABA5E10044BDE7 /* main.m in Sources */,
+				5464D28919ABAFEF0044BDE7 /* NSObject+HHAHelperMethods.m in Sources */,
 				5464D26A19ABA5CF0044BDE7 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
